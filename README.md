@@ -1,21 +1,23 @@
-# OpenMRS 3 — Patient Chart Summary Redesign
+# OpenMRS 3 — Patient Chart Explorations
 
-A single-file hi-fi prototype exploring three redesign directions for the OpenMRS 3.x patient chart summary.
+A static site with two design artifacts for the O3 patient chart:
 
-## Hosting on GitHub Pages
+- **`replica.html`** — faithful clickable recreation of the production chart
+- **`redesign.html`** — three redesign variants on a side-by-side canvas
+- **`index.html`** — landing page linking to both
 
-1. Create a new GitHub repo (e.g. `openmrs-chart-redesign`)
-2. Copy `index.html` into the repo root
-3. Commit & push
-4. In the repo → **Settings** → **Pages** → set **Source** to `Deploy from branch`, branch `main`, folder `/ (root)` → **Save**
-5. Wait ~1 minute; your site will be at `https://<username>.github.io/<repo>/`
+All files are fully self-contained (React, styles, data, fonts inlined). No build step.
 
-That's it — the file is fully self-contained (no build step, no dependencies).
+## Deploy to GitHub Pages
 
-## Variants
+1. Create a new repo and drop these three files at the root (or inside `/docs`).
+2. **Settings → Pages → Source:** Deploy from a branch → `main` / `/` (or `/docs`).
+3. Wait a minute. The landing page lives at your Pages URL; the two chart views at `/replica.html` and `/redesign.html`.
 
-- **A · Conservative** — refined O3 classic layout
-- **B · Balanced** — two-column with timeline spine
-- **C · Bold** — magazine layout with metric hero
+## Local preview
 
-Use the Tweaks panel (if available in the viewer) to switch density, accent color, and banner styles.
+Just open `index.html` in a browser. No server needed.
+
+## Credits
+
+Derived from [OpenMRS](https://openmrs.org) / [openmrs-esm-patient-chart](https://github.com/openmrs/openmrs-esm-patient-chart) — MPL 2.0. Design prototype, not a production build.
